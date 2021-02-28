@@ -4,244 +4,81 @@
     <main id="main">
         <section class="breadcrumbs">
         </section>
-        <section id="signin" class="signin">
+        <section id="forum" class="forum">
             <div class="container" data-aos="fade-up">
-                <div class="row">
-                    <div class="offset-lg-2 col-lg-7 col-sm-12 ">
-                        <div class="containerpass">
+
+            <div class="row">
                             <div class="section-title">
-                                <p> Forum  </p>
+                                <p> <i class="icofont-book-alt"></i> Livre d'or   </p>
                             </div>
-                        </div>
+            </div>
+
+             <div class="row">
+                     <div class="offset-lg-1 col-lg-10 col-sm-6 col-sm-12">
+                        <h3 class="mt-1"> Ils se sont régalés et ils témoignent !</h3>
+                            <p class="mb-5">
+                            Un livre d'or vous attend sur le comptoir du restaurant ! 
+                            Merci à tous pour votre fidélité et les agréables témoignages d’affection que vous nous faites au fil des pages…</p>      
                     </div>
-                  
+              </div>
+
+            <div class="row">
+                <div class="mb-5 panel-heading">
+                        <i class="icofont-wechat"></i>Témoignages de nos clients
                 </div>
             </div>
-        </section>
-
-    </main>
-
-     <!-- project team & activity start -->
-     <div class="row">
-                    <div class="col-md-4 portlets">
-                        <!-- Widget -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <div class="pull-left">Message</div>
-                                <div class="widget-icons pull-right">
-                                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a>
-                                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <div class="panel-body">
-                                <!-- Widget content -->
-                                <div class="padd sscroll">
-
-                                    <ul class="chats">
-
-                                        <!-- Chat by us. Use the class "by-me". -->
-                                        <li class="by-me">
-                                            <!-- Use the class "pull-left" in avatar -->
-                                            <div class="avatar pull-left">
-                                                <img src="img/user.jpg" alt="" />
-                                            </div>
-
-                                            <div class="chat-content">
-                                                <!-- In meta area, first include "name" and then "time" -->
-                                                <div class="chat-meta">John Smith <span class="pull-right">3 hours ago</span></div>
+            <div class="row">
+                                    <h4 class=" offset-lg-1  col-lg-6 col-sm-6 col-sm-12  mb-5"> 
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
+                                        Découvrez les témoignages que nous ont laissés nos clients – fidèles ou de passage. 
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i> 
+                                    </h4>
+                                    <p class="  col-lg 6 col-sm-6 col-sm-12">
+                                    N’hésitez pas à nous laisser une petite trace de votre passage!.
+                                        </p>
+                                        <button class=" btn  col-lg-2 col-md-6 col-sm-12 mt-0 mb-5" type="submit" >Laissez un avis</button>
+                         </div>
+            <div class="row">
+           <ul  class=" offset-lg-2 col-lg-6 col-md-6 col-sm-12  " >
+                                        <li  class="mb-5 d-none d-lg-block ">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
                                                 Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                                                <div class="clearfix"></div>
-                                            </div>
                                         </li>
-
-                                        <!-- Chat by other. Use the class "by-other". -->
-                                        <li class="by-other">
-                                            <!-- Use the class "pull-right" in avatar -->
-                                            <div class="avatar pull-right">
-                                                <img src="img/user22.png" alt="" />
-                                            </div>
-
-                                            <div class="chat-content">
-                                                <!-- In the chat meta, first include "time" then "name" -->
-                                                <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
-                                                Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit.
-                                                <div class="clearfix"></div>
-                                            </div>
+                                        <li  class="mb-5 mt-5 d-none d-lg-block">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
                                         </li>
-
-                                        <li class="by-me">
-                                            <div class="avatar pull-left">
-                                                <img src="img/user.jpg" alt="" />
-                                            </div>
-
-                                            <div class="chat-content">
-                                                <div class="chat-meta">John Smith <span class="pull-right">4 hours ago</span></div>
-                                                Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                                                <div class="clearfix"></div>
-                                            </div>
+                                        <li  class="mb-5 mt-5 d-none d-lg-block">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
                                         </li>
-
-                                        <li class="by-other">
-                                            <!-- Use the class "pull-right" in avatar -->
-                                            <div class="avatar pull-right">
-                                                <img src="img/user22.png" alt="" />
-                                            </div>
-
-                                            <div class="chat-content">
-                                                <!-- In the chat meta, first include "time" then "name" -->
-                                                <div class="chat-meta">3 hours ago <span class="pull-right">Jenifer Smith</span></div>
-                                                Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit.
-                                                <div class="clearfix"></div>
-                                            </div>
+                                        <li  class="mb-5 mt-5 d-none d-lg-block">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
                                         </li>
-
-                                    </ul>
-
-                                </div>
-                                <!-- Widget footer -->
-                                <div class="widget-foot">
-
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Type your message here...">
-                                        </div>
-                                        <button type="submit" class="btn btn-info">Send</button>
-                                    </form>
-
-
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <section class="panel">
-                            <div class="panel-body progress-panel">
-                                <div class="row">
-                                    <div class="col-lg-8 task-progress pull-left">
-                                        <h1>To Do Everyday</h1>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <span class="profile-ava pull-right">
-                                        <img alt="" class="simple" src="img/avatar1_small.jpg">
-                                        Jenifer smith
-                                </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <table class="table table-hover personal-task">
-                                <tbody>
-                                    <tr>
-                                        <td>Today</td>
-                                        <td>
-                                            web design
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-important">Upload</span>
-                                        </td>
-                                        <td>
-                                            <span class="profile-ava">
-                                        <img alt="" class="simple" src="img/avatar1_small.jpg">
-                                    </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Yesterday</td>
-                                        <td>
-                                            Project Design Task
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-success">Task</span>
-                                        </td>
-                                        <td>
-                                            <div id="work-progress2"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21-10-14</td>
-                                        <td>
-                                            Generate Invoice
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-success">Task</span>
-                                        </td>
-                                        <td>
-                                            <div id="work-progress3"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22-10-14</td>
-                                        <td>
-                                            Project Testing
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-primary">To-Do</span>
-                                        </td>
-                                        <td>
-                                            <span class="profile-ava">
-                                        <img alt="" class="simple" src="img/avatar1_small.jpg">
-                                      </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>24-10-14</td>
-                                        <td>
-                                            Project Release Date
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-info">Milestone</span>
-                                        </td>
-                                        <td>
-                                            <div id="work-progress4"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>28-10-14</td>
-                                        <td>
-                                            Project Release Date
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-primary">To-Do</span>
-                                        </td>
-                                        <td>
-                                            <div id="work-progress5"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Last week</td>
-                                        <td>
-                                            Project Release Date
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-primary">To-Do</span>
-                                        </td>
-                                        <td>
-                                            <div id="work-progress1"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>last month</td>
-                                        <td>
-                                            Project Release Date
-                                        </td>
-                                        <td>
-                                            <span class="badge bg-success">To-Do</span>
-                                        </td>
-                                        <td>
-                                            <span class="profile-ava">
-                                        <img alt="" class="simple" src="img/avatar1_small.jpg">
-                                      </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                        <!--Project Activity end-->
-                    </div>
-                </div>
+                                        <li  class="mb-5 mt-5 d-none d-lg-block">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
+                                        </li>
+                                        <li  class="mb-5 mt-5 d-none d-lg-block">
+                                                <div class="chat-meta">John Smith
+                                                     <span class="pull-right">3 hours ago</span>
+                                                </div>
+                                                Vivamus diam elit diam, consectetur dapibus adipiscing elit.
+                                        </li>
+                        </ul>
+            </div>
+            </div>
+        </section>
     <!-- Fin #main -->
 @endsection 

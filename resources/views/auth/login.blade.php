@@ -3,7 +3,7 @@
 <main id="main">
         <section class="breadcrumbs">
         </section>
-        <section id="signup" class="signup">
+        <section id="login" class="login">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <p>SE CONNECTER</p>
@@ -41,8 +41,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group row ">
+                            <div class="col-md-6 offset-md-4 ">
                                 <div class="form-check">
                                     <input class="form-check-input" style="height:25px;" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label class="form-check-label" for="remember">
@@ -52,23 +52,23 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mt-0">
                             <div class="offset-lg-4 col-lg-6 col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn ">
                                     {{ __('CONNEXION') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="reset" href="{{ route('password.request') }}">
-                                        {{ __('Mot de passe oublié') }}
+                                    <a class="reset " href="{{ route('password.request') }}">
+                                        {{ __('Mot de passe oublié ?') }}
                                     </a>
                                 @endif
                             </div>
                         </div>
                     </form>
                     </div>
-                    <div class="col-lg-6 col-sm-12">
-                    <img class="signup-image" src="assets/img/serveur.png" alt="">
+                    <div class="col-lg-3 col-sm-12">
+                    <img class="login-image" src="assets/img/serveur.png" alt="">
                     </div>
                 </div>
 </div>

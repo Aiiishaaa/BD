@@ -5,7 +5,7 @@
 <main id="main">
     <section class="breadcrumbs">
         </section>
-        <section id="signup" class="signup">
+        <section id="register" class="register">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <p>S'INSCRIRE</p>
@@ -14,7 +14,7 @@
                     <div class="col-lg-9 col-sm-12">
                     <form method="POST" action="{{ route('register') }}" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
                         @csrf
-                        <div class="form-row">
+                        <div class="form-group  row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('NOM COMPLET') }}</label>
 
                         <div class="col-lg-6 col-md-6 form-group">
@@ -73,15 +73,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <input id ="condition" class="form-control col-md-4 offset-lg-3 col-lg-1 col-sm-2"  required autocomplete="condition" style="height:25px;" type="checkbox" name="rgpd" id="check">
-                            <label class="col-lg-8 col-md-6 col-sm-10" for="check">                     
+                            <input id ="condition" class="form-control col-md-4 offset-lg-3 col-lg-1 col-sm-2"  required autocomplete="condition" style="height:20px;" type="checkbox" name="rgpd" id="check">
+                            <label  style="font-size:14px;"class="col-lg-8 col-md-6 col-sm-10" for="check">                     
                               Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement
                         </label>           
                     </form>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-12">
-                    <img class="signin-image" src="assets/img/serveur.png" alt="">
+                    <img class="register-image" src="assets/img/serveur.png" alt="">
                 </div>
         </div>  
 </section>

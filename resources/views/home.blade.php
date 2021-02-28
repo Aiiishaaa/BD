@@ -1,9 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-
-
-
 <main id="main">
         <section class="breadcrumbs">
         </section>
@@ -51,7 +48,7 @@
             
                 <div class="row">
                         <section class="panel">
-                            <header class="panel-heading">
+                            <header class="panel-heading"><i class="icofont-users-alt-1"></i>
                                 Table des membres
                             </header>
                 </div>

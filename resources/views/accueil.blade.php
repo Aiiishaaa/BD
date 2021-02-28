@@ -9,8 +9,8 @@
                     <h1>CHEZ<span> DÉLICES D'ANTIBES </span></h1>
                     <h2>DES TRÉSORS GUSTATIFS & UNE AMBIANCE CONTEMPORAINE</h2>
                     <div class="btns">
-                        <a href="#menu" class="btn-menu animated fadeInUp ">Découvrir les menus</a>
-                        <a href="#reservertable" class="btn-book animated fadeInUp ">Réservez votre table</a>
+                        <a href="{{ url('forum') }}" class="btn-menu animated fadeInUp ">Découvrir les témoignages</a>
+                        <a href="{{ url('reserve') }}" class="btn-book animated fadeInUp ">Commandez</a>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
@@ -220,10 +220,9 @@
                 </div>
 
                 <div class="owl-carousel evenements-carousel" data-aos="fade-up" data-aos-delay="100">
-
                     <div class="row evenements-item">
                         <div class="col-lg-6">
-                            <img src="assets/img/anniversaires.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 content">
                             <h3>Anniversaires</h3>
@@ -269,7 +268,7 @@
 
                     <div class="row evenements-item">
                         <div class="col-lg-6">
-                            <img src="assets/img/evenements-custom.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0 content">
                             <h3>Soirées personnalisées</h3>
@@ -298,58 +297,6 @@
 
         <!-- Fin Section Evenements -->
 
-        <!-- =======  Section Réservation======= -->
-        <section id="reservertable" class="reservertable">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Réservation</h2>
-                    <p>Réservez votre table </p>
-                </div>
-
-                <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
-                    <div class="form-row">
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="NOM COMPLET" data-rule="minlen:4" data-msg="Veuillez saisir au moins 4 caractères">
-                            <div class="valider"></div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="EMAIL" data-rule="email" data-msg="Veuillez saisir un e-mail valide">
-                            <div class="valider"></div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="NUMÉRO DE TÉLÉPHONE" data-rule="minlen:10" data-msg="Veuillez saisir au moins 10 caractères">
-                            <div class="valider"></div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="text" name="date" class="form-control" id="date" placeholder="DATE" data-rule="minlen:5" data-msg="Veuillez saisir au moins 5 caractères">
-                            <div class="valider"></div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="text" class="form-control" name="time" id="time" placeholder="HEURE" data-rule="minlen:5" data-msg="Veuillez saisir au moins 5 caractères">
-                            <div class="valider"></div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 form-group">
-                            <input type="number" class="form-control" name="people" id="people" placeholder="NOMBRE DE PERSONNES" data-rule="minlen:1" data-msg="Veuillez saisir au moins 1 caractère">
-                            <div class="valider"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" placeholder="DEMANDES PARTICULIÈRES"></textarea>
-                        <div class="valider"></div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="chargement">Chargement</div>
-                        <div class="message-erreur"></div>
-                        <div class="message-envoye">
-                            Votre demande de réservation a été envoyée. Nous vous rappellerons ou vous enverrons un e-mail pour confirmer votre réservation. Merci!</div>
-                    </div>
-                    <div class="text-center col-lg-4 offset-lg-4"><button type="submit">Réservez</button></div>
-                </form>
-
-            </div>
-        </section>
-        <!-- Fin Section Réservation -->
 
         <!-- ======= Section Témoignages ======= -->
         <section id="temoignages" class="temoignages section-bg">
@@ -485,7 +432,7 @@
 
 
         <!-- ======= Section  Galerie======= -->
-        <section id="gallery" class="gallery">
+        <section id="galerie" class="gallery">
 
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
@@ -496,74 +443,73 @@
 
             <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="row no-gutters">
+<div class="row no-gutters">
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-1.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-1.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-2.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-2.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-2.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-3.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-3.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-3.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-4.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-4.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-4.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-5.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-5.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-5.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-6.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-6.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-6.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-7.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-7.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-7.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                    <div class="col-lg-3 col-md-4">
-                        <div class="gallery-item">
-                            <a href="assets/img/galerie/galerie-8.jpg" class="venobox" data-gall="gallery-item">
-                                <img src="assets/img/galerie/galerie-8.jpg" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                    </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="gallery-item">
+      <a href="assets/img/gallery/gallery-8.jpg" class="venobox" data-gall="gallery-item">
+        <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+      </a>
+    </div>
+  </div>
 
-                </div>
-
+</div>
             </div>
         </section>
         <!-- Fin Section Galerie -->
@@ -620,36 +566,36 @@
                         </div>
 
                     </div>
+                     
+          <div class="col-lg-8 mt-5 mt-lg-0">
 
-                    <div class="col-lg-8 mt-5 mt-lg-0">
-                        <form action="" method="post" role="form" class="php-email-form">
+                            <form action="" method="post" role="form" class="php-email-form">
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nom complet" data-rule="minlen:6" data-msg="Veuillez saisir au moins 6 caractères" />
-                                    <div class="valider"></div>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Nom complet" data-rule="minlen:6" data-msg="Veuillez saisir au moins 6 caractères" />
+                                <div class="validate"></div>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Veuillez saisir un e-mail valide" />
-                                    <div class="valider"></div>
+                                <input type="email" class="form-control" name="email" id="email" placeholder=" Email" data-rule="email" data-msg="Veuillez saisir un e-mail valide" />
+                                <div class="validate"></div>
                                 </div>
                             </div>
-                          
                             <div class="form-group">
-                                <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="S'il vous plaît écrivez quelque chose pour nous" placeholder=" Commentaires"></textarea>
-                                <div class="valider"></div>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:8" data-msg="Veuillez saisir au moins 8 caractères" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="S'il vous plaît écrivez quelque chose pour nous" placeholder=" Commentaires"></textarea>
+                                <div class="validate"></div>
                             </div>
                             <div class="mb-3">
-                                <div class="chargement">Chargement</div>
-                                <div class="message-erreur"></div>
-                                <div class="message-envoye">
-                                    Votre message a bien été envoyé. Nous vous répondrons rapidement. Merci !
-                                </div>
+                                <div class="loading">Chargement</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Votre message a bien été envoyé. Nous vous répondrons rapidement. Merci !</div>
                             </div>
-                            <div class="text-center col-lg-8 offset-lg-2"><button type="submit">Laissez un commentaire </button></div>
-                        </form>
-
-                    </div>
-
+                            <div class=" offset-lg-5 col-lg-3 text-center"><button type="submit"> ENVOYEZ</button></div>
+                            </form>
+                            </div>
                 </div>
 
             </div>

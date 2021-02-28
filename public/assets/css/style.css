@@ -180,8 +180,8 @@ h6 {
     background: rgba(12, 11, 9, 0.6);
     border-bottom: 1px solid rgba(12, 11, 9, 0.6);
     transition: all 0.5s;
-    z-index: 1;
-    padding: 10px 0;
+    z-index: 997;
+    padding: 15px 0;
     top: 40px;
 }
 
@@ -200,6 +200,10 @@ h6 {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
+}
+
+#header .logo a {
+    color: #fff;
 }
 
 
@@ -259,8 +263,230 @@ h6 {
     color: #fff;
 }
 
+.nav-menu .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: calc(100% + 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
 
-/*** Mobile navigation
+.nav-menu .drop-down:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.nav-menu .drop-down li {
+    min-width: 180px;
+    position: relative;
+}
+
+.nav-menu .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #1a1814;
+}
+
+.nav-menu .drop-down ul a:hover,
+.nav-menu .drop-down ul .active>a,
+.nav-menu .drop-down ul li:hover>a {
+    color: #cda45e;
+}
+
+.nav-menu .drop-down>a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+}
+
+.nav-menu .drop-down .drop-down:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu .drop-down .drop-down>a {
+    padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down>a:after {
+    content: "\eaa0";
+    font-family: IcoFont;
+    position: absolute;
+    right: 25px;
+}
+
+@media (max-width: 1366px) {
+    .nav-menu .drop-down .drop-down ul {
+        left: -90%;
+    }
+    .nav-menu .drop-down .drop-down:hover>ul {
+        left: -100%;
+    }
+    .nav-menu .drop-down .drop-down>a:after {
+        content: "\ea9d";
+    }
+}
+
+
+/*** Mobile navigation***/
+
+.mobile-nav-toggle {
+    position: absolute;
+    right: -135px;
+    top: 5px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    outline: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background: #1a1814;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav .mobile-nav-close {
+    margin: 0 15px 0 auto;
+    display: block;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.mobile-nav .mobile-nav-close:hover {
+    color: #fff;
+}
+
+.mobile-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+    outline: none;
+    transition: 0.3s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active>a,
+.mobile-nav li:hover>a {
+    color: #cda45e;
+    text-decoration: none;
+}
+
+.mobile-nav .drop-down>a:after {
+    content: "\ea99";
+    font-family: IcoFont;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .active.drop-down>a:after {
+    content: "\eaa1";
+}
+
+.mobile-nav .sign a {
+    color: #fff;
+    border: 2px solid #cda45e;
+    border-radius: 50px;
+    margin: 20px 0 0 0;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.mobile-nav .sign a:hover {
+    background: #cda45e;
+    color: #fff;
+}
+
+.mobile-nav .drop-down>a {
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+    padding-left: 20px;
+}
+
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    display: none;
+    transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+}
+
 
 /*--------------------------------------------------------------
 #   Section accueil
@@ -855,140 +1081,17 @@ section {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #ddd !important;
+    background-color: #ddd;
 }
 
 .evenements .owl-dot.active {
-    background-color: #cda45e !important;
+    background-color: #cda45e;
 }
 
 @media (min-width: 992px) {
     .evenements .evenements-item p {
         width: 80%;
     }
-}
-
-
-/*--------------------------------------------------------------
-# Réservation
---------------------------------------------------------------*/
-
-.reservertable .php-email-form {
-    width: 100%;
-}
-
-.reservertable .php-email-form .form-group {
-    padding-bottom: 8px;
-}
-
-.reservertable .php-email-form .valider {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.reservertable .php-email-form .message-erreur {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.reservertable .php-email-form .message-erreur br+br {
-    margin-top: 25px;
-}
-
-.reservertable .php-email-form .message-envoye {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.reservertable .php-email-form .chargement {
-    display: none;
-    text-align: center;
-    padding: 15px;
-}
-
-.reservertable .php-email-form .chargement:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #cda45e;
-    border-top-color: #1a1814;
-    -webkit-animation: animate-chargement 1s linear infinite;
-    animation: animate-chargement 1s linear infinite;
-}
-
-.reservertable .php-email-form input,
-.reservertable .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    background: #0c0b09;
-    border-color: #625b4b;
-    color: white;
-}
-
-.reservertable .php-email-form input::-webkit-input-placeholder,
-.reservertable .php-email-form textarea::-webkit-input-placeholder {
-    color: #a49b89;
-}
-
-.reservertable .php-email-form input::-moz-placeholder,
-.reservertable .php-email-form textarea::-moz-placeholder {
-    color: #a49b89;
-}
-
-.reservertable .php-email-form input:-ms-input-placeholder,
-.reservertable .php-email-form textarea:-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.reservertable .php-email-form input::-ms-input-placeholder,
-.reservertable .php-email-form textarea::-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.reservertable .php-email-form input::placeholder,
-.reservertable .php-email-form textarea::placeholder {
-    color: #a49b89;
-}
-
-.reservertable .php-email-form input:focus,
-.reservertable .php-email-form textarea:focus {
-    border-color: #cda45e;
-}
-
-.reservertable .php-email-form input {
-    height: 44px;
-}
-
-.reservertable .php-email-form textarea {
-    padding: 10px 12px;
-}
-
-.reservertable .php-email-form button[type="submit"] {
-    background: #cda45e;
-    border: 0;
-    padding: 10px 35px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-}
-
-.reservertable .php-email-form button[type="submit"]:hover {
-    background: #d3af71;
 }
 
 
@@ -1355,79 +1458,20 @@ section {
 
 
 /*--------------------------------------------------------------
-#   Se connecter 
+#   Se connecter  - s'identifier
 --------------------------------------------------------------*/
 
-.signin-content {
-    padding-top: 67px;
-    padding-bottom: 87px;
-}
-
-.signin-form {
+.login-form {
     margin-top: 10px;
     margin-right: 90px;
     margin-left: 80px;
 }
 
-.signin .php-email-form {
+.login .php-email-form {
     width: 100%;
 }
 
-.signin .php-email-form .form-group {
-    padding-bottom: 8px;
-}
-
-.signin .php-email-form .valider {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.signin .php-email-form .message-erreur {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.signin .php-email-form .message-erreur br+br {
-    margin-top: 25px;
-}
-
-.signin .php-email-form .message-envoye {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.signin .php-email-form .chargement {
-    display: none;
-    text-align: center;
-    padding: 15px;
-}
-
-.signin .php-email-form .chargement:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #cda45e;
-    border-top-color: #1a1814;
-    -webkit-animation: animate-chargement 1s linear infinite;
-    animation: animate-chargement 1s linear infinite;
-}
-
-.signin .php-email-form input,
-.signin .php-email-form textarea {
+.login .php-email-form input {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
@@ -1436,45 +1480,11 @@ section {
     color: white;
 }
 
-.signin .php-email-form input::-webkit-input-placeholder,
-.signin .php-email-form textarea::-webkit-input-placeholder {
-    color: #a49b89;
-}
-
-.signin .php-email-form input::-moz-placeholder,
-.signin .php-email-form textarea::-moz-placeholder {
-    color: #a49b89;
-}
-
-.signin .php-email-form input:-ms-input-placeholder,
-.signin .php-email-form textarea:-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.signin .php-email-form input::-ms-input-placeholder,
-.signin .php-email-form textarea::-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.signin .php-email-form input::placeholder,
-.signin .php-email-form textarea::placeholder {
-    color: #a49b89;
-}
-
-.signin .php-email-form input:focus,
-.signin .php-email-form textarea:focus {
-    border-color: #cda45e;
-}
-
-.signin .php-email-form input {
+.login .php-email-form input {
     height: 44px;
 }
 
-.signin .php-email-form textarea {
-    padding: 10px 12px;
-}
-
-.signin .php-email-form button[type="submit"] {
+.login .php-email-form button[type="submit"] {
     background: #cda45e;
     border: 0;
     padding: 10px 35px;
@@ -1483,173 +1493,27 @@ section {
     border-radius: 50px;
 }
 
-.signin .php-email-form button[type="submit"]:hover {
+.login .php-email-form button[type="submit"]:hover {
     background: #d3af71;
 }
 
-.signin-image {
-    height: 80%;
-    width: 80%;
-    position: absolute;
-    z-index: 1;
-    right: 220px;
-}
-
-
-/*--------------------------------------------------------------
-#   S'inscrire
---------------------------------------------------------------*/
-
-.signup-content {
-    padding-top: 67px;
-    padding-bottom: 87px;
-}
-
-.signup-form {
-    margin-top: 10px;
-    margin-right: 90px;
-    margin-left: 80px;
-}
-
-.signup .php-email-form {
-    width: 100%;
-}
-
-.signup .php-email-form .form-group {
-    padding-bottom: 8px;
-}
-
-.signup .php-email-form .form-group a {
-    color: #cda45e;
+.login .php-email-form .form-group a {
     float: right;
 }
 
-.signup .php-email-form .valider {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.signup .php-email-form .message-erreur {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.signup .php-email-form .message-erreur br+br {
-    margin-top: 25px;
-}
-
-.signup .php-email-form .message-envoye {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.signup .php-email-form .chargement {
-    display: none;
-    text-align: center;
-    padding: 15px;
-}
-
-.signup .php-email-form .chargement:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #cda45e;
-    border-top-color: #1a1814;
-    -webkit-animation: animate-chargement 1s linear infinite;
-    animation: animate-chargement 1s linear infinite;
-}
-
-.signup .php-email-form input,
-.signup .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    background: #0c0b09;
-    border-color: #625b4b;
-    color: white;
-}
-
-.signup .php-email-form input::-webkit-input-placeholder,
-.signup .php-email-form textarea::-webkit-input-placeholder {
-    color: #a49b89;
-}
-
-.signup .php-email-form input::-moz-placeholder,
-.signup .php-email-form textarea::-moz-placeholder {
-    color: #a49b89;
-}
-
-.signup .php-email-form input:-ms-input-placeholder,
-.signup .php-email-form textarea:-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.signup .php-email-form input::-ms-input-placeholder,
-.signup .php-email-form textarea::-ms-input-placeholder {
-    color: #a49b89;
-}
-
-.signup .php-email-form input::placeholder,
-.signup .php-email-form textarea::placeholder {
-    color: #a49b89;
-}
-
-.signup .php-email-form input:focus,
-.signup .php-email-form textarea:focus {
-    border-color: #cda45e;
-}
-
-.signup .php-email-form input {
-    height: 44px;
-}
-
-.signup .php-email-form textarea {
-    padding: 10px 12px;
-}
-
-.signup .php-email-form button[type="submit"] {
-    background: #cda45e;
-    border: 0;
-    padding: 10px 35px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-    margin: auto;
-    padding: 0%;
-}
-
-.signup .php-email-form button[type="submit"]:hover {
-    background: #d3af71;
-}
-
-.signup-image {
-    height: 100%;
-    width: 50%;
-    top: -80px;
+.login-image {
+    height: 120%;
+    width: 100%;
     position: absolute;
     z-index: 1;
-    right: 420px;
+    top: -100px;
+    right: 150px;
 }
 
 button {
     border: none;
     width: 100%;
     height: 49px;
-    margin-top: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1672,20 +1536,71 @@ button:hover {
 
 
 /*--------------------------------------------------------------
+#   S'inscrire
+--------------------------------------------------------------*/
+
+.register .php-email-form {
+    width: 100%;
+}
+
+.register .php-email-form .form-group a {
+    color: #cda45e;
+    float: right;
+}
+
+.register .php-email-form input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
+}
+
+.register .php-email-form input:focus {
+    border-color: #cda45e;
+}
+
+.register .php-email-form input {
+    height: 44px;
+}
+
+.register .php-email-form button[type="submit"] {
+    background: #cda45e;
+    border: 0;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.register .php-email-form button[type="submit"]:hover {
+    background: #d3af71;
+}
+
+.register-image {
+    height: 100%;
+    width: 100%;
+    top: -80px;
+    position: absolute;
+    z-index: 1;
+    right: 190px;
+}
+
+
+/*--------------------------------------------------------------
 #   Password
 --------------------------------------------------------------*/
 
 .password {
-    min-height: 80vh;
     display: flex;
     align-items: center;
     color: #0c0b09;
     animation: wheelHueColor 10s infinite;
 }
 
-.containerpass {
-    position: relative;
-    width: 550px;
+.password .php-email-form {
+    width: 100%;
 }
 
 .img-new {
@@ -1698,53 +1613,34 @@ button:hover {
     z-index: 1;
 }
 
-.message {
-    color: white;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 20px;
-    font-family: "Playfair Display", serif;
-    text-align: center;
-}
-
-.formpass {
-    width: 100%;
-    padding: 77px 61px 66px;
-    background: #0c0b09;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -ms-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-}
-
-.textpass {
-    text-transform: uppercase;
-    font-size: 25px;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 33px;
-    color: #cda45e;
-}
-
-.form-holderpass {
-    margin-bottom: 21px;
-}
-
 .form-controlpass {
-    border: none;
-    border-bottom: 1px solid #e6e6e6;
-    display: block;
-    width: 100%;
-    height: 38px;
-    background: none;
-    padding: 3px 42px 0px;
-    color: rgb(255, 255, 255);
-    font-family: "Muli-SemiBold";
-    font-size: 16px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 20px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
 }
 
-button-reset {
+.password .php-email-form input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
+}
+
+.password .form-pass .form-group input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: #0c0b09;
+    border-color: #625b4b;
+    color: white;
+}
+
+.btn-reset {
     border: none;
     width: 100%;
     height: 49px;
@@ -1753,24 +1649,36 @@ button-reset {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: auto;
     background: #cda45e;
     color: #fff;
     text-transform: uppercase;
     font-family: "Muli-SemiBold";
     font-size: 15px;
-    letter-spacing: 2px;
     transition: all 0.5s;
     position: relative;
     overflow: hidden;
+    border-radius: 50px;
 }
 
 button-reset:hover {
-    background: #e49d19;
+    background: #d3af71;
+    ;
+}
+
+.reset-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 190px;
 }
 
 
-/*----------------------	panel-----------------*/
+/*--------------------------------------------------------------
+#Home Admin
+--------------------------------------------------------------*/
 
 .social-box {
     min-height: 158px;
@@ -1843,6 +1751,51 @@ button-reset:hover {
 
 .table {
     color: white;
+}
+
+
+/*--------------------------------------------------------------
+# Forum
+--------------------------------------------------------------*/
+
+.forum-content {
+    padding-top: 67px;
+    padding-bottom: 87px;
+}
+
+.forum-form {
+    margin-top: 10px;
+    margin-right: 90px;
+    margin-left: 80px;
+}
+
+.forum-form .form-group {
+    width: 100%;
+}
+
+.forum-form .btn {
+    border: none;
+    width: 100%;
+    height: 49px;
+    margin-top: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #cda45e;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+button-reset:hover {
+    background: #e49d19;
 }
 
 

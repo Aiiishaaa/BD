@@ -25,7 +25,6 @@
     <link href="assets/js/owl.carousel/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/icofont/icofont.min.css') }}" >
 
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -47,7 +46,7 @@
                 <i class="icofont-phone"></i><a href="tel:06 18 26 71 00"> 06 18 26 71 00<a>
                 <span class="d-none d-lg-inline-block"><i class="icofont-clock-time"></i>  Lun -Ven:12:00-14:30&19:30- 23:30 / Samedi : 19:30-23:30 / Dimanche Fermé</span>
             </div>
-            <div class="offres">
+            <div class="offres  d-none d-lg-inline-block">
                 <ul>
                     <li>
                         <i class="icofont-ui-check"></i> <span>Vente à emporter</span>
@@ -81,12 +80,12 @@
                             <li class="sign text-center"><a href="{{route('register')}}"> S'inscrire</a></li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                            <li  style ="color:Black;" class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a   style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}
