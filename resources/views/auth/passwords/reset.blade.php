@@ -10,11 +10,12 @@
                 </div>
                  <div class="row">
                 <div class="offset-lg-1 col-lg-10 col-sm-12">
-                    <form method="POST" action="{{ route('password.update') }}" class="form-pass" >
+           <form method="POST" action="{{ route('password.update') }}" class="form-pass" >
                         @csrf
                         <input type="hidden" name="token" value="{{ $token }}">
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 mb-2 bt-2" style="color :white;font-size:20px;">{{ __('ENTREZ VOTRE ADRESSE EMAIL') }}</label>
+                            <label for="email" class="col-md-4 mb-2 bt-2" style="color :white;font-size:20px;">
+                            {{ __('ENTREZ VOTRE ADRESSE EMAIL') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email"  style="font-size:20px;" class="  form-controlpass @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
