@@ -90,6 +90,19 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}
                                     </a>
+
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.users.index') }}"> 
+                                    Gestion des utilisateurs
+                                    </a>
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.Commandes.index') }}"> 
+                                    Gestion des commandes
+                                    </a>
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.reservations.index') }}"> 
+                                    Gestion des réservations
+                                    </a>
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.users.index') }}"> 
+                                    Gestion des commentaires
+                                    </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -103,7 +116,6 @@
         </div>
     </header>
    <body>
-    <div class="flex-grow-1">
     @yield('content')
     </div>
   

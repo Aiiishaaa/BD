@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComentsTable extends Migration
+class CreateRoleUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateComentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coments', function (Blueprint $table) {
+        Schema::create('role_user', function (Blueprint $table) {
             $table->id();
+            $table->integer('role_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
-            $table->longText('coment'); 
-            $table->string('email')->unique();
-            $table->string('image') ->default('image.jpg');
+
         });
-  
     }
 
     /**
@@ -30,6 +29,6 @@ class CreateComentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coments');
+        Schema::dropIfExists('role_user');
     }
 }

@@ -24,12 +24,7 @@ class CreateReservationsTable extends Migration
             $table->integer('numberofperson');
             $table->longText('message');
         });
-        Schema::table('reservations', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users')
-                ->foreignId('user_id')
-                ->constrained()
-                ->onDelete('cascade');
-        });
+
     }
 
     /**

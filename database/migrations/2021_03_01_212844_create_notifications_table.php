@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateComentsTable extends Migration
+class CreateNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateComentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coments', function (Blueprint $table) {
-            $table->id();
+        Schema::create('notifications', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('type');
+            $table->morphs('notifiable');
+            $table->text('data');
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
-            $table->longText('coment'); 
-            $table->string('email')->unique();
-            $table->string('image') ->default('image.jpg');
         });
-  
     }
 
     /**
@@ -30,6 +30,6 @@ class CreateComentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coments');
+        Schema::dropIfExists('notifications');
     }
 }

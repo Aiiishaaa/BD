@@ -18,12 +18,7 @@ class CreateNewslettersTable extends Migration
             $table->timestamps();
             $table->string('email')->unique();
         });
-        Schema::table('newsletters', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users')
-                ->foreignId('user_id')
-                ->constrained()
-                ->onDelete('cascade');
-        });
+
     }
 
     /**
