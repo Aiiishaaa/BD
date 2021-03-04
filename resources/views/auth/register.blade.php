@@ -64,24 +64,26 @@
                             </div>
                         </div>
 
-  
+                        <div class="form-group row offset-lg-1 ">
+                            <input id ="condition" class="form-control col-md-4 offset-lg-3 col-lg-1 col-sm-2  mr-0 "  required autocomplete="condition" style="height:20px;" type="checkbox" name="rgpd" id="check">
+                            <label  style="font-size:14px;"class="col-lg-6 col-md-6 col-sm-10" for="check">
+                              Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement
+                        </label>
+                        </div> 
+
                         <div class="form-group row ">
-                            <div class="offset-lg-6 col-lg-3 col-md-6 offset-md-4 col-sm-12">
+                            <div class="offset-lg-5 col-lg-4 col-md-6 offset-md-4 col-sm-12">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Inscription') }}
                                 </button>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <input id ="condition" class="form-control col-md-4 offset-lg-3 col-lg-1 col-sm-2"  required autocomplete="condition" style="height:20px;" type="checkbox" name="rgpd" id="check">
-                            <label  style="font-size:14px;"class="col-lg-8 col-md-6 col-sm-10" for="check">                     
-                              Je reconnais avoir pris connaissance des conditions d’utilisation et y adhère totalement
-                        </label>           
+                
                     </form>
                     </div>
-                </div>
                 <div class="col-lg-3 col-sm-12">
                     <img class="register-image" src="assets/img/serveur.png" alt="">
+                </div>
                 </div>
         </div>  
 </section>

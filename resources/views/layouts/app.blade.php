@@ -21,6 +21,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="assets/js/owl.carousel/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/icofont/icofont.min.css') }}" >
@@ -85,23 +86,19 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('forum') }}"> 
+                                    Gestion des commandes
+                                    </a>
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('reservation') }}"> 
+                                    Gestion des réservations
+                                    </a>
+                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('forum') }}"> 
+                                    Gestion des commentaires
+                                    </a>
                                     <a   style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Se déconnecter') }}
-                                    </a>
-
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.users.index') }}"> 
-                                    Gestion des utilisateurs
-                                    </a>
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.Commandes.index') }}"> 
-                                    Gestion des commandes
-                                    </a>
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.reservations.index') }}"> 
-                                    Gestion des réservations
-                                    </a>
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('admin.users.index') }}"> 
-                                    Gestion des commentaires
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

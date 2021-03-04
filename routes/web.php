@@ -36,13 +36,6 @@ Route::get('forum',function(){
     }
 });
 
-Route::get('forum',function(){
-    if ( auth()->check()){
-        return redirect('ComChange');
-    }else{
-    return view("forum");
-    }
-});
 
 Route::post('contact',function(){
     $data = request(['name', 'email', 'subject', 'message']);
@@ -53,12 +46,13 @@ Route::post('contact',function(){
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user', 'UserController@index')->name('user');
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+
 
 
 Route::namespace('Admin')-> prefix('admin')->name('admin')-> group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

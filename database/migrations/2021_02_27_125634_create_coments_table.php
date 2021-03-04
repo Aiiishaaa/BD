@@ -17,9 +17,15 @@ class CreateComentsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->longText('coment'); 
-            $table->string('email')->unique();
             $table->string('image') ->default('image.jpg');
         });
+        Schema::table('coments', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained('users')
+                ->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade');
+        });
+
   
     }
 

@@ -10,7 +10,7 @@
                     <h2>DES TRÉSORS GUSTATIFS & UNE AMBIANCE CONTEMPORAINE</h2>
                     <div class="btns">
                         <a href="{{ url('forum') }}" class="btn-menu animated fadeInUp ">Découvrir les témoignages</a>
-                        <a href="{{ url('reserve') }}" class="btn-book animated fadeInUp ">Commandez</a>
+                        <a href="{{ url('reserve') }}" class="btn-book animated fadeInUp "> Click and Collect avec Uber</a>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
@@ -306,53 +306,16 @@
                     <p>Ce qu'ils disent de nous !</p>
                 </div>
                 <div class="owl-carousel temoignages-carousel" data-aos="zoom-in" data-aos-delay="100">
-
+                @foreach ($coments as $coment)
                     <div class="temoignages-item">
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
-                            L'accueil est toujours extraordinaire , le service impeccable , le sourire naturel. La pièce de boeuf Angus , délicieuse , tendre et savoureuse .Accompagnée de belles frites blondes et chaudes.
+                            {{ $coment -> coment}}
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                         <img src="assets/img/temoignages/temoignages-1.jpg" class="temoignages-img" alt="">
-                        <h3>Térence F.</h3>
-                    </div>
-                    <div class="temoignages-item">
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
-                                A real treat. Succulent and perfectly cooked meats! A very well prepared fish! A top-notch and personalized welcome! We highly recommend! You can go there with your eyes closed!
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <img src="assets/img/temoignages/temoignages-2.jpg" class="temoignages-img" alt="">
-                        <h3>Sarah D.</h3>
-                    </div>
-                    <div class="temoignages-item">
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>Sans aucun doute un des plus bons restaurants de la ville, un service majestueux avec des produits frais, l'amour de la cuisine dans une assiette ! Les prix sont largement plus qu'abordables
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <img src="assets/img/temoignages/temoignages-3.jpg" class="temoignages-img" alt="">
-                        <h3>Haifa E.</h3>
-                    </div>
-                    <div class="temoignages-item">
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>Un service attentionné et sympathique, une courte carte des vins, mais
-                            des vins bien choisis, un prix raisonnable pour la qualité offerte.                     
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <img src="assets/img/temoignages/temoignages-4.jpg" class="temoignages-img" alt="">
-                        <h3>Matt Brandon</h3>
-                    </div>
-                    <div class="temoignages-item">
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i> Un accueil chaleureux qui met tout de suite à l'aise. On a l'impression d'être des habitués.
-                            Les plats sont bons, gouteux et beaux.
-                            Le service et les explications sont très professionnels.
-                            Restaurant à recommander. 
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                        <img src="assets/img/temoignages/temoignages-5.jpg" class="temoignages-img" alt="">
-                        <h3>John Larson</h3>
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -568,32 +531,27 @@
                     </div>
                      
           <div class="col-lg-8 mt-5 mt-lg-0">
-
-                            <form action="" method="post" role="form" class="php-email-form">
+                        @if(session('flash'))
+                            <h3 class="text-success">{{ session('flash') }}</h3>
+                        @endif
+                            <form action="contact" method="post" role="form" class="php-email-form">
+                            @csrf
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Nom complet" data-rule="minlen:6" data-msg="Veuillez saisir au moins 6 caractères" />
-                                <div class="validate"></div>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Nom complet" data-rule="minlen:6" data-msg="Veuillez saisir au moins 6 caractères"required >
                                 </div>
+                                
                                 <div class="col-md-6 form-group">
-                                <input type="email" class="form-control" name="email" id="email" placeholder=" Email" data-rule="email" data-msg="Veuillez saisir un e-mail valide" />
-                                <div class="validate"></div>
+                                <input type="email" class="form-control" name="email" id="email" placeholder=" Email" data-rule="email" data-msg="Veuillez saisir un e-mail valide" required >
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:8" data-msg="Veuillez saisir au moins 8 caractères" />
-                                <div class="validate"></div>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet" data-rule="minlen:8" data-msg="Veuillez saisir au moins 8 caractères" required >
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="S'il vous plaît écrivez quelque chose pour nous" placeholder=" Commentaires"></textarea>
-                                <div class="validate"></div>
                             </div>
-                            <div class="mb-3">
-                                <div class="loading">Chargement</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Votre message a bien été envoyé. Nous vous répondrons rapidement. Merci !</div>
-                            </div>
-                            <div class=" offset-lg-5 col-lg-3 text-center"><button type="submit"> ENVOYEZ</button></div>
+                            <div class=" offset-lg-5 col-lg-3 text-center"><button type="submit" name="submit"> ENVOYEZ</button></div>
                             </form>
                             </div>
                 </div>

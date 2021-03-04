@@ -1,17 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
-use App\Http\Controllers\Controller;
-use App\User;
+namespace App\Http\Controllers;
+use App\Coment;//Appel la class Coment
+use App\user;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Image;
 
-class UsersController extends Controller
+class ComentController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -19,8 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users =User::all();
-        return view(view('admin.users.index')->with('users',$users));
+        return view('home');
     }
 
     /**
@@ -30,7 +25,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('coments.create');
     }
 
     /**
@@ -41,51 +36,58 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $coment= Coment::create($request->all());
+    
+        return redirect('ComChange')->with('status', 'Votre commentaire a été bien ajouté!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Coment $coment)
     {
-        //
+        return view('coments.show',compact('coment'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Coment $coment)
     {
-        //
+        return view ('coments.edit', compact('coment'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Coment $coment)
     {
-        //
+            $coment->update($request->all());
+            return redirect('ComChange')->with('status_update', 'Votre commentaire a été bien modifié!');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\Coment  $coment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Coment $coment)
     {
-        //
+        $coment->delete();
+        return back()->with('status_delete', 'Votre commentaire a été bien supprimé!');
+
     }
 }
+

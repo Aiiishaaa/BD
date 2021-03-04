@@ -56,13 +56,17 @@
                             <div class="offset-lg-4 col-lg-6 col-md-8 offset-md-4">
                                 <button type="submit" class="btn ">
                                     {{ __('CONNEXION') }}
-                                </button>
+                                </button> 
 
                                 @if (Route::has('password.request'))
                                     <a class="reset " href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié ?') }}
                                     </a>
                                 @endif
+                                <a class="reset " href="{{ route('register') }}">
+                                        {{ __('Pas encore inscrit?') }}
+                                    </a>
+
                             </div>
                         </div>
                     </form>
