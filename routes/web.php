@@ -41,7 +41,7 @@ Route::post('contact',function(){
     $data = request(['name', 'email', 'subject', 'message']);
     Mail::to('aicha.hamida31@gmail.com')
     ->send(new \App\Mail\ContactMail($data));
-    return redirect ('/' )->with('flash', 'Votre demande a été envoyée avec succès');
+    return redirect ('/' )->with('msgcontact', 'Votre demande a été envoyée avec succès');
 });
 
 Auth::routes();

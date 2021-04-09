@@ -87,12 +87,6 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('forum') }}"> 
-                                    Gestion des commandes
-                                    </a>
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('reservation') }}"> 
-                                    Gestion des réservations
-                                    </a>
-                                    <a    class="dropdown-item" style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ url('forum') }}"> 
                                     Gestion des commentaires
                                     </a>
                                     <a   style ="color:white; background-color:#c69f51;" class="dropdown-item" href="{{ route('logout') }}"

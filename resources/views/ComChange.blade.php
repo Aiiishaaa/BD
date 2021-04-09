@@ -39,9 +39,9 @@
                     </div>
               </div>
                 <li  class="  col-lg-6 col-md-6 col-sm-12 d-none d-lg-block ">
-                                                <div class=" col-lg-6 mb-3 "><b>  {{ $coment  -> created_at}}</b></div>
-                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
-                                                {{ $coment -> coment}}
+                    <div class=" col-lg-6 mb-3 "><b>  {{ $coment  -> created_at}}</b></div>
+                         <i class="bx bxs-quote-alt-left quote-icon-left"></i> 
+                                {{ $coment -> coment}}
                                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                               
                                                 <form action="{{route('coments.destroy', $coment->id)}}" method="POST" onsubmit="return confirm('Étes-vous sûr de vouloir supprimer votre commentaire ?');">
